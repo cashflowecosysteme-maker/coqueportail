@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>__AGENT_NAME__ — NyXia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/chat.css">
+</head>
+<body>
+  <canvas id="starry-canvas"></canvas>
+  <div class="chat-area">
+    <div class="chat-header">
+      <span id="agent-avatar" class="chat-header-badge">__AGENT_ICON__</span>
+      <div class="chat-header-info"><div class="chat-header-name">__AGENT_NAME__</div><div class="chat-header-sub">__AGENT_SUB__</div></div>
+      <button type="button" class="btn-new-chat" id="new-chat-btn">✨ Nouveau chat</button>
+    </div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="suggestions" id="formation-launch-wrap" hidden><button type="button" class="fo-launch" id="formation-btn">🎓 Formation Vivante</button></div>
+    <div id="attachment-state" class="attachment-state" hidden></div>
+    <div class="chat-input-wrap">
+      <label class="icon-btn" title="Joindre une image">📎<input id="file-input" type="file" accept="image/*" hidden></label>
+      <button class="icon-btn" id="mic-btn" type="button" title="Parler">🎤</button>
+      <textarea class="chat-input" id="message-input" rows="1" placeholder="Écris ou parle à __AGENT_NAME__..."></textarea>
+      <button class="btn-send" id="send-btn" type="button">➤</button>
+    </div>
+    <div class="chat-hint">Entrée pour envoyer · Shift+Entrée pour un retour à la ligne</div>
+  </div>
+  <script>window.NYXIA_AGENT=__AGENT_JSON__;window.NYXIA_PORTAL_TITLE=__PORTAL_TITLE_JSON__;</script>
+  <script src="/js/starry-bg.js" defer></script>
+  <script src="/js/chat.js" defer></script>
+</body>
+</html>
