@@ -3261,6 +3261,10 @@ export default {
 const url = new URL(request.url);
     const path = url.pathname;
 
+    if (path === '/' || path === '/index') {
+      if (env.ASSETS) return env.ASSETS.fetch(new Request(new URL('/index.html', request.url), request));
+    }
+
     // La racine reste réservée à index.html : la page de vente du portail Alex.
     if (path === '/login') {
       return Response.redirect(url.origin + '/login.html' + url.search, 302);
