@@ -340,7 +340,7 @@
   "sourceCatalog": "univers:/api/personnages",
   "host": "coqueportail.nyxia.top",
   "workerName": "coqueportail",
-  "compiledAt": "2026-09-25T18:16:47.404Z",
+  "compiledAt": "2026-09-25T18:23:29.797Z",
   "sharedData": {
     "kv": "CASHFLOW_KV",
     "d1": "nyxia-cercles-db",
