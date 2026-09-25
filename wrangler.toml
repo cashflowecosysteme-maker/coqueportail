@@ -32,6 +32,6 @@ binding = "VECTORIZE_INDEX"
 index_name = "univers-livres"
 
 [vars]
-SITE_URL = "https://__HOST__"
+SITE_URL = "https://coqueportail.nyxia.top"
 PORTAIL = "__PORTAL_ID__"
 PORTAL_SLUG = "__PORTAL_ID__"
