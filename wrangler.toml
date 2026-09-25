@@ -8,7 +8,11 @@ keep_vars = true
 [assets]
 directory = "."
 binding = "ASSETS"
-run_worker_first = true
+
+[[routes]]
+pattern = "coqueportail.nyxia.top"
+zone_name = "nyxia.top"
+custom_domain = true
 
 [[kv_namespaces]]
 binding = "CASHFLOW_KV"
@@ -30,29 +34,3 @@ index_name = "univers-livres"
 SITE_URL = "https://coqueportail.nyxia.top"
 PORTAIL = "coqueportail"
 PORTAL_SLUG = "coqueportail"
-
-[[routes]]
-pattern = "coqueportail.nyxia.top"
-zone_name = "nyxia.top"
-custom_domain = true
-ELEVENLABS_NYXIA_VOICE_ID = "4RsGOijU4NDnmihod21E"
-ELEVENLABS_DIANE_VOICE_ID = "HpPsEmBPs9okadyROxr6"
-ELEVENLABS_ALEX_VOICE_ID = "0Z7Lo7cYVyjM6WL0AP0n"
-ELEVENLABS_LENA_VOICE_ID = "aTxZrSrp47xsP6Ot4Kgd"
-ELEVENLABS_SELENA_VOICE_ID = "bBRsDJSAcL1ubkrtJ3hM"
-ELEVENLABS_ABIME_VOICE_ID = "fNmw8sukfGuvWVOp33Ge"
-ELEVENLABS_AIMEE_VOICE_ID = "UJCi4DDncuo0VJDSIegj"
-ELEVENLABS_ALETHEIA_VOICE_ID = "taOhVGnnfgm0gEJnfB0f"
-ELEVENLABS_ALEXANDRA_VOICE_ID = "ELf3eScSrJr0jn1jDw8T"
-ELEVENLABS_ALIBI_VOICE_ID = "K7gx0ylJdff0yjM2uVQS"
-ELEVENLABS_CASSANDRE_VOICE_ID = "YxrwjAKoUKULGd0g8K9Y"
-ELEVENLABS_CELESTE_VOICE_ID = "7VoxpuBC4ZIcnW14yi9m"
-ELEVENLABS_CONSTANCE_VOICE_ID = "u5l0VNCfzO5oqrKTuA1e"
-ELEVENLABS_DAPHNEE_VOICE_ID = "mActWQg9kibLro6Z2ouY"
-ELEVENLABS_DYLAN_VOICE_ID = "93nuHbke4dTER9x2pDwE"
-ELEVENLABS_FRIPOUILLE_VOICE_ID = "piI8Kku0DcvcL6TTSeQt"
-ELEVENLABS_GABRIELLE_VOICE_ID = "gCr8TeSJgJaeaIoV4RWH"
-ELEVENLABS_KEVEN_VOICE_ID = "RTFg9niKcgGLDwa3RFlz"
-ELEVENLABS_MARIE_PIER_VOICE_ID = "K7gx0ylJdff0yjM2uVQS"
-ELEVENLABS_MELUSINE_VOICE_ID = "iB0Pwf5VYt7UDBrGrMqH"
-ELEVENLABS_SOPHIA_VOICE_ID = "WQKwBV2Uzw1gSGr69N8I"

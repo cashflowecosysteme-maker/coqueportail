@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 6,
+  "schemaVersion": 8,
   "projectRecordId": "6a5254a8-ed14-4b4d-a12b-3c27410154b4",
   "createdBy": "NyXia Univers · Super Admin 4",
   "id": "coqueportail",
@@ -93,7 +93,7 @@
       "custom": false,
       "portail": "kael",
       "voiceEnv": "ELEVENLABS_KAEL_VOICE_ID",
-      "voiceId": "",
+      "voiceId": "93nuHbke4dTER9x2pDwE",
       "greeting": "Je suis là. Dis-moi ce que tu veux faire avancer dans ce portail."
     },
     {
@@ -317,6 +317,7 @@
     "ELEVENLABS_NYXIA_VOICE_ID": "4RsGOijU4NDnmihod21E",
     "ELEVENLABS_DIANE_VOICE_ID": "HpPsEmBPs9okadyROxr6",
     "ELEVENLABS_ALEX_VOICE_ID": "0Z7Lo7cYVyjM6WL0AP0n",
+    "ELEVENLABS_KAEL_VOICE_ID": "93nuHbke4dTER9x2pDwE",
     "ELEVENLABS_LENA_VOICE_ID": "aTxZrSrp47xsP6Ot4Kgd",
     "ELEVENLABS_SELENA_VOICE_ID": "bBRsDJSAcL1ubkrtJ3hM",
     "ELEVENLABS_ABIME_VOICE_ID": "fNmw8sukfGuvWVOp33Ge",
@@ -339,11 +340,12 @@
   "sourceCatalog": "univers:/api/personnages",
   "host": "coqueportail.nyxia.top",
   "workerName": "coqueportail",
-  "compiledAt": "2026-09-25T15:37:38.393Z",
+  "compiledAt": "2026-09-25T17:52:45.052Z",
   "sharedData": {
     "kv": "CASHFLOW_KV",
     "d1": "nyxia-cercles-db",
     "vectorize": "univers-livres"
   },
-  "templateSource": "/superadmin4/portail-shell-template.zip"
+  "templateSource": "/superadmin4/portail-shell-template.zip · blob a5a6ac3a7586ce75b93526029e04e939b0b8aee2",
+  "templateGitBlob": "a5a6ac3a7586ce75b93526029e04e939b0b8aee2"
 }
