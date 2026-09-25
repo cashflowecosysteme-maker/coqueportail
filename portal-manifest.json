@@ -340,12 +340,12 @@
   "sourceCatalog": "univers:/api/personnages",
   "host": "coqueportail.nyxia.top",
   "workerName": "coqueportail",
-  "compiledAt": "2026-09-25T18:46:41.903Z",
+  "compiledAt": "2026-09-25T19:00:18.832Z",
   "sharedData": {
     "kv": "CASHFLOW_KV",
     "d1": "nyxia-cercles-db",
     "vectorize": "univers-livres"
   },
-  "templateSource": "/superadmin4/portail-shell-template.zip · blob eb0af08d010af8a5aedaafa436b0f79b2dbf47a2",
-  "templateGitBlob": "eb0af08d010af8a5aedaafa436b0f79b2dbf47a2"
+  "templateSource": "/superadmin4/portail-shell-template.zip · blob def190413f34521357d4a10954e16c9c28e71484",
+  "templateGitBlob": "def190413f34521357d4a10954e16c9c28e71484"
 }

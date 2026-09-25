@@ -40,8 +40,8 @@
     </div>
 
     <div class="chat-input-wrap">
-      <label title="PDF, image ou ZIP" style="flex-shrink:0;width:36px;height:36px;border-radius:9px;border:1px solid rgba(123,92,255,0.2);background:rgba(123,92,255,0.06);color:var(--t3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px">
-        📎<input type="file" id="chat-file" accept=".pdf,.zip,image/*" style="display:none">
+      <label title="PDF, audio, vidéo, image ou ZIP" style="flex-shrink:0;width:36px;height:36px;border-radius:9px;border:1px solid rgba(123,92,255,0.2);background:rgba(123,92,255,0.06);color:var(--t3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px">
+        📎<input type="file" id="chat-file" accept=".pdf,.zip,.doc,.docx,.txt,.md,audio/*,video/*,image/*" style="display:none">
       </label>
       <button id="btn-mic" onclick="toggleMic()" title="Parler" style="flex-shrink:0;width:36px;height:36px;border-radius:9px;border:1px solid rgba(123,92,255,0.2);background:rgba(123,92,255,0.06);color:var(--t3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px">🎤</button>
       <textarea class="chat-input" id="chat-input" placeholder="Écris ou parle à NyXia..." rows="1"></textarea>
@@ -787,8 +787,11 @@
 
   function cleanMarkdown(str) {
     return str
-      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:underline">$1</a>')
-      .replace(/(^|[^"'>=])(https?:\/\/[^\s<]+)/g, function(_,pre,url){ var tail=''; var mt=url.match(/[)\].,;!?]+$/); if(mt){ tail=mt[0]; url=url.slice(0,url.length-tail.length); } return pre+'<a href="'+url+'" target="_blank" rel="noopener" style="color:#c4b5fd;text-decoration:underline">'+url+'</a>'+tail; })
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, function(_,label,url){
+        var safeLabel=/^https?:\/\//i.test(label)?'Ouvrir la page web':label
+        return '<a href="'+url+'" target="_blank" rel="noopener" style="display:inline-block;margin:8px 0;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,#7B5CFF,#9d7bff);color:#fff;text-decoration:none;font-weight:700">🔗 '+safeLabel+'</a>'
+      })
+      .replace(/(^|[^"'>=])(https?:\/\/[^\s<]+)/g, function(_,pre,url){ var tail=''; var mt=url.match(/[)\].,;!?]+$/); if(mt){ tail=mt[0]; url=url.slice(0,url.length-tail.length); } return pre+'<a href="'+url+'" target="_blank" rel="noopener" style="display:inline-block;margin:8px 0;padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,#7B5CFF,#9d7bff);color:#fff;text-decoration:none;font-weight:700">🔗 Ouvrir la page web</a>'+tail; })
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '$1')
       .replace(/^---+$/gm, '')
